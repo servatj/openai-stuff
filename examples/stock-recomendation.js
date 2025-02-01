@@ -32,7 +32,7 @@ async function main() {
     const messages = [
       {
         role: 'system',
-        content: 'you are helpful assistante that generates stock reports advising for traders'
+        content: 'You are a trading guru. Given data on share prices over the past 3 days, write a report markdown with icons of no more than 150 words describing the stocks performance and recommending whether to buy, hold or sell.'
       },
       {
         role: 'user',
@@ -47,7 +47,7 @@ async function main() {
       temperature: 0.5
     })
     
-    console.log('Response:', response.choices[0].message.content)
+    console.log(response.choices[0].message.content)
 
   } catch (error) {
     console.error(error)
